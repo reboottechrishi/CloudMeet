@@ -40,3 +40,15 @@ Cost is free however, for users who need more power and features, there's Notebo
 NotebookLM is a game-changer for anyone who conducts research. It empowers you to work smarter, not harder, by leveraging the power of AI to unlock the full potential of your documents. Whether you're a student, researcher, writer, or professional, NotebookLM can help you achieve your research goals more efficiently and effectively.
 
 Consider trying NotebookLM today and experience the future of research.
+
+
+## Demo 
+
+|Link| https://notebooklm.google.com |
+
+<img width="1326" alt="image" src="https://github.com/user-attachments/assets/8ad15af5-2329-41d7-b51e-f41b15a1f2e7" />
+
+
+<img width="1162" alt="image" src="https://github.com/user-attachments/assets/2d8e821c-65c6-47fa-92bb-a5a1ecbf2566" />
+
+
