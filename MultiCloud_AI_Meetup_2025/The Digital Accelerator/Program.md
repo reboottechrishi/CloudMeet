@@ -1,4 +1,4 @@
-## The Digital Accelerator Program: Empowering Our Team for the Future
+## The Digital Accelerator Program: Empowering for the Future
 
 **Introduction:**
 
