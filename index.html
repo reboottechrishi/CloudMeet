@@ -122,26 +122,35 @@
             color: #fff;
             position: relative;
         }
-        .footer-time {
-            font-size: 0.8rem; /* Small font size */
-            margin-top: 0.5rem;
-            color: #fff;
-        }
-        .cta {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-        .cta a {
+        footer .youtube-link {
+            margin-top: 1rem;
             display: inline-block;
-            background: #ff8c00; /* Dark Orange */
-            color: #fff;
+            background: #fff;
+            color: #ff8c00;
             padding: 0.8rem 1.5rem;
             text-decoration: none;
             font-size: 1rem;
             border-radius: 5px;
+            font-weight: bold;
         }
-        .cta a:hover {
-            background: #e67e00; /* Slightly Darker Orange */
+        footer .youtube-link:hover {
+            background: #e67e00;
+            color: #fff;
+        }
+        .blog-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .blog-section ul li {
+            margin: 0.5rem 0;
+        }
+        .blog-section ul li a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .blog-section ul li a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 768px) {
             .main-content {
@@ -170,6 +179,8 @@
         <a href="#about">About</a>
         <a href="#agenda">Agenda</a>
         <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+        <a href="https://www.youtube.com/channel/your-channel-id" target="_blank">YouTube</a>
     </nav>
     <div class="main-content">
         <!-- Main Content Section -->
@@ -226,6 +237,14 @@
                     <a href="https://github.com/reboottechrishi/CloudMeet" target="_blank">Contact</a>
                 </div>
             </section>
+            <section id="blog" class="blog-section">
+                <h2>Our Blog</h2>
+                <ul>
+                    <li><a href="https://github.com/reboottechrishi/CloudMeet/blob/main/blogs/aws.md" target="_blank">2025-04-10 First Post</a></li>
+                    <li><a href="https://github.com/reboottechrishi/CloudMeet/blob/main/blogs/2025-04-15-second-post.md" target="_blank">2025-04-15 Second Post</a></li>
+                    <li><a href="https://github.com/reboottechrishi/CloudMeet/blob/main/blogs/2025-04-20-third-post.md" target="_blank">2025-04-20 Third Post</a></li>
+                </ul>
+            </section>
         </div>
 
         <!-- Sidebar Section -->
@@ -234,8 +253,10 @@
             <ul>
                 <li>AWS</li>
                 <li>Azure</li>
-                <li>GCP Cloud</li>
+                <li>GCP</li>
                 <li>DevOps</li>
+                <li>MLOps</li>
+                <li>DataScience</li>
                 <li>React</li>
                 <li>HTML</li>
                 <li>Python</li>
@@ -250,6 +271,7 @@
             <p id="est-time">EST: Loading...</p>
             <p id="ist-time">IST: Loading...</p>
         </div>
+        <a class="youtube-link" href="https://www.youtube.com/@AWSEventsChannel" target="_blank">Visit our YouTube Channel</a>
     </footer>
     <script>
         function updateTime() {
