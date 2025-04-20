@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the official site of RebootTechRishi">
+    <title>RebootTechRishi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #ff8c00; /* Dark Orange */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            height: 50px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            flex: 3;
+            margin-right: 1.5rem;
+        }
+        .sidebar {
+            flex: 1;
+            background: #ffe4c4; /* Light Orange (Bisque) */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: auto; /* Ensure proper alignment */
+            max-width: 300px; /* Restrict the width of the sidebar */
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+        .sidebar h2 {
+            color: #ff8c00; /* Dark Orange */
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            background: #ff8c00; /* Dark Orange */
+            color: #fff;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        h2 {
+            color: #ff8c00; /* Dark Orange */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+        table th {
+            background-color: #ff8c00; /* Dark Orange */
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background: #ff8c00; /* Dark Orange */
+            color: #fff;
+            position: relative;
+        }
+        .footer-time {
+            font-size: 0.8rem; /* Small font size */
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .cta a {
+            display: inline-block;
+            background: #ff8c00; /* Dark Orange */
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .cta a:hover {
+            background: #e67e00; /* Slightly Darker Orange */
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Stack content and sidebar */
+            }
+            .content {
+                margin-right: 0;
+            }
+            .sidebar {
+                margin-left: 0;
+                max-width: 100%; /* Sidebar takes full width on smaller screens */
+            }
+            table th, table td {
+                font-size: 0.9rem; /* Smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150?text=Logo" alt="Logo">
+        <h1>RebootTechRishi</h1>
+        <p>Empowering Innovation Through Technology</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <div class="content">
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Welcome to RebootTechRishi, your go-to platform for exploring cutting-edge technology solutions and staying ahead in the fast-evolving world of multi-cloud and DevOps. Join us as we share insights, best practices, and the latest trends shaping the future of technology.</p>
+            </section>
+            <section id="agenda">
+                <h2>Get Ready to Reboot! - Upcoming Events</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Topic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>W1</td>
+                            <td>Agile Project Management - Hands-on with Jira</td>
+                        </tr>
+                        <tr>
+                            <td>W2</td>
+                            <td>ReactJS Zero to Hero - Build Modern UIs from Scratch</td>
+                        </tr>
+                        <tr>
+                            <td>W3</td>
+                            <td>Data Science Deep Dive - Unlocking Insights from Data</td>
+                        </tr>
+                        <tr>
+                            <td>W4</td>
+                            <td>Demystifying Networks - From Cables to the Cloud</td>
+                        </tr>
+                        <tr>
+                            <td>W5</td>
+                            <td>IAM in Action - Protecting Resources and Identities</td>
+                        </tr>
+                        <tr>
+                            <td>W6</td>
+                            <td>Mastering Cloud Compute - Practical Skills for the Cloud</td>
+                        </tr>
+                        <tr>
+                            <td>W7</td>
+                            <td>Getting Hands-on with AI - Tools and Techniques</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="contact">
+                <h2>Join Us</h2>
+                <p>Be a part of our journey to drive innovation and explore the future of technology. Contact RebootTechRishi Core Team!</p>
+                <div class="cta">
+                    <a href="https://github.com/reboottechrishi/CloudMeet" target="_blank">Contact</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h2>Technologies We Cover</h2>
+            <ul>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>GCP Cloud</li>
+                <li>DevOps</li>
+                <li>React</li>
+                <li>HTML</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JSON</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 RebootTechRishi. All rights reserved.</p>
+        <div class="footer-time">
+            <p id="est-time">EST: Loading...</p>
+            <p id="ist-time">IST: Loading...</p>
+        </div>
+    </footer>
+    <script>
+        function updateTime() {
+            const now = new Date();
+
+            // EST (Eastern Standard Time)
+            const estOptions = { timeZone: 'America/New_York', timeZoneName: 'short' };
+            const estTime = now.toLocaleString('en-US', estOptions);
+            document.getElementById('est-time').textContent = `EST: ${estTime}`;
+
+            // IST (Indian Standard Time)
+            const istOptions = { timeZone: 'Asia/Kolkata', timeZoneName: 'short' };
+            const istTime = now.toLocaleString('en-US', istOptions);
+            document.getElementById('ist-time').textContent = `IST: ${istTime}`;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+        updateTime(); // Initialize the time immediately
+    </script>
+</body>
+</html>
