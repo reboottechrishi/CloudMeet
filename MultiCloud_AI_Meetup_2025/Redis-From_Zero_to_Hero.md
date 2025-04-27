@@ -133,16 +133,16 @@ For those leveraging the Amazon Web Services (AWS) ecosystem, Redis integrates s
 * **Security:** Integration with AWS security features like VPCs and encryption.  
 * **Monitoring:** Seamless integration with Amazon CloudWatch for performance monitoring and alerting.
 
-**Using Redis with your React application hosted on S3 (backed by API/Lambda):**
+## Use case - Using Redis with your React application hosted on S3 (backed by API/Lambda):
 
-As highlighted earlier, Redis can dramatically improve the performance of your SRE dashboard. Here's a recap of how it works in this context:
+Redis can dramatically improve the performance of your dashboard. Here's a recap of how it works in this context:
 
 1. Your React application, served from S3, makes API calls to your backend (likely AWS Lambda functions).  
 2. These Lambda functions, instead of directly querying AWS services for every request, first check ElastiCache for Redis.  
-3. If the required data (e.g., EC2 instance counts, deprecated Lambda lists, backup statuses) is found in Redis (a **cache hit**), it's returned immediately, significantly reducing latency.  
+3. If the required data (e.g., EC2 instance counts,  Lambda lists, backup stats) is found in Redis (a **cache hit**), it's returned immediately, significantly reducing latency.  
 4. If the data is not in Redis (**cache miss**), the Lambda function fetches it from the relevant AWS services, stores it in ElastiCache with a defined **Time-To-Live (TTL)**, and then returns it to the React application.
 
-This caching strategy minimizes the number of calls to AWS APIs, reduces the load on your backend, and drastically improves the loading speed of your SRE dashboard, especially when dealing with data from a large number of AWS accounts.
+This caching strategy minimizes the number of calls to AWS APIs, reduces the load on your backend, and drastically improves the loading speed of your dashboard, especially when dealing with data from a large number of AWS accounts.
 
 ## **Advanced Redis Features: Taking Your Skills to the Next Level**
 
@@ -161,3 +161,11 @@ Beyond the basics, Redis offers advanced features that can unlock even greater p
 ## **Conclusion: Embrace the Power of Redis**
 
 Redis is a versatile and powerful tool that can significantly enhance the performance and scalability of your applications. Whether you're looking to speed up data retrieval through caching, manage user sessions efficiently, build real-time features, or optimize your AWS-based infrastructure, Redis offers a compelling solution. By understanding its fundamental concepts, exploring its rich data structures, and leveraging its integration with services like AWS ElastiCache, you can unlock the true potential of your applications and deliver a superior user experience. So, dive
+
+| Topic    | Link                         |
+| --- | ----------------------------- |
+| Build GenAI apps with Redis | https://redis.io/docs/latest/ |
+| Redis Document  | https://redis.io/docs/latest/ |
+| --- | ----------------------------- |
+| Deploy Redis Enterprise Software for Kubernetes  | https://redis.io/docs/latest/operate/kubernetes/deployment/quick-start/ |
+|**How to build a real-time sales analytics dashboard with Amazon ElastiCache for Redis**|https://aws.amazon.com/blogs/database/building-a-real-time-sales-analytics-dashboard-with-amazon-elasticache-for-redis/|
