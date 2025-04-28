@@ -9,7 +9,14 @@
        : Will setup two host machine in diffrent VLAN and try to connect
        : will setup two host in same VLAN and try to connect
        : Requirenent of Router/L3 switch to connect different VLNS
- 
+
+- LAB2:Connect your VPC to other networks
+       :Enable internet access for a VPC using an internet gateway
+       :Connect to the internet or other networks using NAT devices
+       :Associate Elastic IP addresses with resources in your VPC
+       :Connect your VPC to other VPCs and networks using a transit gateway
+       :Connect your VPC to remote networks using AWS Virtual Private Network
+       : Connect VPCs using VPC peering
 ```
 * **Internet Access:**
     * Enabling internet access for a VPC using an internet gateway
