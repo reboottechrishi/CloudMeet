@@ -3,6 +3,14 @@
 
 |Link||https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html|
 
+```
+- Basic networking
+- LAB : how to configure Switch brought from market? like namming, multiple VLANs,Port assignation of VLAN
+       : Will setup two host machine in diffrent VLAN and try to connect
+       : will setup two host in same VLAN and try to connect
+       : Requirenent of Router/L3 switch to connect different VLNS
+ 
+```
 * **Internet Access:**
     * Enabling internet access for a VPC using an internet gateway
     * Enabling outbound IPv6 traffic using an egress-only internet gateway
