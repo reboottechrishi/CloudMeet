@@ -24,6 +24,20 @@ Topics: Relational database fundamentals (tables, schemas, keys, relationships).
     Creating sample tables and inserting data.
     Writing various SQL queries to retrieve and manipulate data.
 
+- Diferent data type : https://www.w3schools.com/sql/sql_datatypes.asp
+- Contraints
+- indexing 
+- Abhishek - going to create Cheatsheet
+- Understand what SQL is and why you would use it.
+- Create and manage databases and tables.
+- Insert, update, and delete data in tables.
+- Use SELECT with filters (WHERE) and sorting (ORDER BY) to get data.
+- Use JOIN to combine data from multiple tables.
+- Use functions like SUM, AVG, and COUNT to group data and add them up.
+- Create table relationships with foreign keys.
+- Use SQL functions like MIN, MAX, and COUNT.
+- Understand subqueries and indexes.
+- Manage user permissions and data security.
 ###   NoSQL Databases - Key-Value Stores (e.g., Redis)
 
 Topics: Introduction to NoSQL databases and their advantages. Deep dive into key-value store concepts. Overview of Redis data structures (strings, lists, sets, hashes, sorted sets). Use cases for key-value stores (caching, session management).
