@@ -3,6 +3,33 @@ Owner- Dhruv and Abhishek
 
 -   Hands-on Emphasis: The majority of the session should be dedicated to hands-on labs, coding exercises, or real-world scenario simulations.
 
+## Completed/Follow_up [Tracker]
+
+```
+# Completed
+###   Relational Databases - Core Concepts & SQL
+###   Data Visualization - Principles and Tools
+
+```
+```
+# Pending 
+###   NoSQL Databases - Key-Value Stores (e.g., Redis), NoSQL Databases - Document Stores (e.g., MongoDB)   [AA]
+  - Follow below information for slides/document. Refer AWS link for more insights
+  - Demo on MongoDB and Redis on laptop  -https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/, https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/install-redis-on-windows/
+
+* Data Streaming (e.g., Kafka, Kinesis): Concepts, producers, consumers, basic stream processing.  [AS]
+- A.S has already prepared slides
+- LAB :TBD
+###   ETL Fundamentals - Extract, Transform, Load  [DS]
+###   Cloud Data Warehousing (e.g., Snowflake, BigQuery, Redshift)
+###   Data Modeling Fundamentals
+ 
+* Big Data Technologies (e.g., Spark, Hadoop):
+* Introduction to distributed processing.
+* Machine Learning for Data Engineers: Basic ML concepts and how they integrate with data pipelines.
+* Infrastructure as Code (IaC) for Data Infrastructure (e.g., Terraform, CloudFormation): Provisioning and managing data infrastructure programmatically.
+```
+
 ###   Storage Fundamentals & Object Storage (Cloud Focus)
 
 Topics: Introduction to different types of storage (block, file, object). Deep dive into object storage concepts (buckets, objects, metadata, access control). Overview of a major cloud provider's object storage service (e.g., AWS S3, Azure Blob Storage, GCP Cloud Storage).
@@ -86,6 +113,53 @@ Hands-on: Designing a basic data model for a given business scenario. Creating a
 * Introduction to distributed processing.
 * Machine Learning for Data Engineers: Basic ML concepts and how they integrate with data pipelines.
 * Infrastructure as Code (IaC) for Data Infrastructure (e.g., Terraform, CloudFormation): Provisioning and managing data infrastructure programmatically.
+
+# NoSQL Databases Explained
+
+NoSQL databases, often referred to as "Not only SQL" databases, are a category of database management systems that differ from traditional relational databases (RDBMS) in their structure and how they handle data. Unlike RDBMS, which organize data into tables with fixed schemas, NoSQL databases employ flexible schemas and can handle various data formats, including:
+
+* **Document Databases:** Store data as JSON-like documents, making them suitable for managing semi-structured data. Examples include MongoDB and Couchbase.
+* **Key-Value Stores:** The simplest type, storing data as key-value pairs, ideal for caching and session management. Redis and Memcached are popular examples.
+* **Wide-Column Stores:** Organize data into columns and rows but with flexible schemas where column names can vary across rows. Cassandra and HBase are common wide-column databases.
+* **Graph Databases:** Model data as nodes and edges, emphasizing the relationships between data points. Neo4j and Amazon Neptune are examples of graph databases.
+
+**Key Characteristics of NoSQL Databases:**
+
+* **Schema Flexibility:** NoSQL databases typically do not require a predefined schema, allowing for easier adaptation to changing data requirements.
+* **Scalability:** Designed for horizontal scaling, meaning they can handle increasing loads by adding more servers to a cluster.
+* **High Performance:** Often optimized for specific data models and access patterns, leading to faster read and write operations for certain use cases.
+* **High Availability:** Many NoSQL databases are distributed, with built-in replication and fault tolerance, ensuring continuous operation.
+* **Support for Diverse Data Types:** Can efficiently manage structured, semi-structured, and unstructured data.
+
+**Available NoSQL Solutions:**
+
+There are numerous NoSQL database solutions available, both open-source and commercial, including:
+
+* **Document Databases:** MongoDB, Couchbase, Amazon DocumentDB, Azure Cosmos DB (Document API), Google Cloud Firestore.
+* **Key-Value Stores:** Redis, Memcached, Amazon DynamoDB, Oracle NoSQL Database, Azure Cache for Redis.
+* **Wide-Column Stores:** Apache Cassandra, HBase, Amazon Keyspaces.
+* **Graph Databases:** Neo4j, Amazon Neptune, Azure Cosmos DB (Gremlin API), ArangoDB.
+* **Multi-Model Databases:** ArangoDB, OrientDB, Azure Cosmos DB, MarkLogic. These databases support multiple data models within a single system.
+* **Cloud-Based NoSQL Services:** Many cloud providers offer managed NoSQL services, such as Amazon DynamoDB, Azure Cosmos DB, and Google Cloud Firestore, which simplify deployment and scaling.
+
+**Use Cases for NoSQL Databases:**
+
+NoSQL databases are well-suited for applications with specific requirements for scalability, flexibility, and performance. Here are some common use cases:
+
+* **E-commerce Applications:** Managing product catalogs with varying attributes, handling customer profiles, and processing large volumes of transactions. NoSQL databases can easily scale to handle traffic spikes and provide flexible data models for diverse product information.
+* **Social Media Platforms:** Storing and managing user profiles, posts, connections, and real-time feeds. The ability to handle unstructured data and scale horizontally is crucial for social media's dynamic and large datasets.
+* **Internet of Things (IoT):** Ingesting, processing, and analyzing high volumes of time-series data from sensors and devices. NoSQL databases can handle the velocity and variety of IoT data.
+* **Mobile Applications:** Providing scalable and responsive backends for mobile apps, managing user data, and supporting features like real-time updates and personalization.
+* **Gaming:** Storing game state, user profiles, and leaderboards that require low latency and high throughput to support a large number of concurrent players.
+* **Big Data Analytics:** Storing and querying large, diverse datasets for real-time analytics, customer segmentation, and fraud detection. NoSQL databases' scalability and flexible schemas are beneficial for handling big data.
+* **Content Management Systems (CMS):** Managing various types of content, including text, images, and videos, with flexible schemas that can adapt to different content structures.
+* **Real-time Personalization and Recommendation Engines:** Analyzing user behavior and preferences to deliver personalized content, product recommendations, and targeted offers. NoSQL databases offer the speed and scalability needed for real-time processing.
+* **Fraud Detection:** Analyzing patterns and connections in large datasets to identify suspicious activities in real-time. Graph databases, in particular, are useful for uncovering complex relationships indicative of fraud.
+
+<img src=https://github.com/user-attachments/assets/ca679264-336a-44b5-9b76-0d66175aa25a width="500">
+
+[AWS_link](https://aws.amazon.com/nosql)
+
 
 ##   FAQ based on above Topic:
 
