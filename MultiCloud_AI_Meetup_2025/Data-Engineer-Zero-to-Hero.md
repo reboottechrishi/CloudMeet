@@ -36,7 +36,7 @@ Owner- Dhruv and Abhishek
                              :https://aws.amazon.com/blogs/database/boosting-application-performance-and-reducing-costs-with-amazon-elasticache-for-redis/ 
 
 ### Kafka
-            - Prepare slides for Kafka presentation [Abhishek]
+            - Prepare slides for Kafka presentation [TBD]
             - - https://www.youtube.com/watch?v=QkdkLdMBuL0
             - complete LAB :
             - https://catalog.us-east-1.prod.workshops.aws/workshops/fc5abf5b-b40e-49ba-b8fa-c8606ce13a7c/en-US
