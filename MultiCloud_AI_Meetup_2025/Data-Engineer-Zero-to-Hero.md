@@ -17,9 +17,6 @@ Owner- Dhruv and Abhishek
   - Follow below information for slides/document. Refer AWS link for more insights
   - Demo on MongoDB and Redis on laptop  -https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/, https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/install-redis-on-windows/
 
-* Data Streaming (e.g., Kafka, Kinesis): Concepts, producers, consumers, basic stream processing.  [AS]
-- A.S has already prepared slides
-- LAB :TBD
 ###   ETL Fundamentals - Extract, Transform, Load  [DS]
 ###   Cloud Data Warehousing (e.g., Snowflake, BigQuery, Redshift)
 ###   Data Modeling Fundamentals
@@ -29,6 +26,27 @@ Owner- Dhruv and Abhishek
 * Machine Learning for Data Engineers: Basic ML concepts and how they integrate with data pipelines.
 * Infrastructure as Code (IaC) for Data Infrastructure (e.g., Terraform, CloudFormation): Provisioning and managing data infrastructure programmatically.
 ```
+### Redis and Kafka Lab
+```
+### Redis
+            - Prepare slides for Redis presentation 
+            - complegte LAB  : https://aws.amazon.com/blogs/database/building-a-real-time-sales-analytics-dashboard-with-amazon-elasticache-for-redis/
+                             : https://aws.amazon.com/blogs/database/how-to-build-a-chat-application-with-amazon-elasticache-for-redis/
+                             : https://aws.amazon.com/blogs/database/managing-iot-and-time-series-data-with-amazon-elasticache-for-redis/
+                             :https://aws.amazon.com/blogs/database/boosting-application-performance-and-reducing-costs-with-amazon-elasticache-for-redis/ 
+
+### Kafka
+            - Prepare slides for Kafka presentation [Abhishek]
+            - - https://www.youtube.com/watch?v=QkdkLdMBuL0
+            - complete LAB :
+            - https://catalog.us-east-1.prod.workshops.aws/workshops/fc5abf5b-b40e-49ba-b8fa-c8606ce13a7c/en-US
+            - https://catalog.us-east-1.prod.workshops.aws/workshops/2b03e299-c30f-4144-b452-483356cc5267/en-US
+            - https://aws.amazon.com/blogs/big-data/build-up-to-date-generative-ai-applications-with-real-time-vector-embedding-blueprints-for-amazon-msk/
+            - https://aws.amazon.com/blogs/big-data/publish-and-enrich-real-time-financial-data-feeds-using-amazon-msk-and-amazon-managed-service-for-apache-flink/
+            - https://aws.amazon.com/blogs/big-data/build-an-end-to-end-serverless-streaming-pipeline-with-apache-kafka-on-amazon-msk-using-python/
+            
+```
+
 
 ###   Storage Fundamentals & Object Storage (Cloud Focus)
 
