@@ -1,7 +1,16 @@
 
 # Connect your VPC to other networks
 
-|Link||https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html|
+
+```
+1. Basic Networing - About Netork , OSI Model IP Address
+2. Switch- About and configuration, VLAN STP QOS Trunk 
+3. Router - About and Configuration BGP protocol.
+
+4. Cloud - VPC CIDR , VPC Peering subnetting
+|Link|| https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html |
+
+```
 
 ```
 - Basic networking
