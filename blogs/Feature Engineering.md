@@ -1,6 +1,8 @@
 
 ## Feature Engineering: The Secret Sauce to Smarter ML Models
-
+---
+<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/f34222cd-d43a-4d21-8849-d34d43d097bf" />
+<p></p> 
 
 Hey aspiring ML engineers\! Ever wondered why some machine learning models perform magically well, while others seem to struggle, even with seemingly great algorithms? Often, the unsung hero behind those magical models isn't just a fancy algorithm or endless data, but a crucial step called **Feature Engineering**.
 
