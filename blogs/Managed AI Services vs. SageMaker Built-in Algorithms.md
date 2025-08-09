@@ -180,7 +180,7 @@ Here's a breakdown of some of the most popular SageMaker built-in algorithms and
 
 * **Seq2Seq (Sequence-to-Sequence):** A supervised learning algorithm for tasks where the input is a sequence of tokens and the output is another sequence of tokens. Common use cases include **machine translation, text summarization, and speech-to-text**. It requires data in the `recordIO-protobuf` format with a vocabulary file mapping words to numbers.
 
-* **DeepAR:** This algorithm is specifically designed for **forecasting one-dimensional time series data** using recurrent neural networks (RNNs). It's a great tool for predicting future values based on historical data, like stock prices. It accepts input in JSON, GIP, or Parquet format.
+* **DeepAR:** This algorithm is specifically designed for **forecasting one-dimensional time series data** using recurrent neural networks (RNNs). It's a great tool for predicting future values based on historical data, like stock prices. It accepts input in JSON, ZIP, or Parquet format.
 
 * **BlazingText:** This algorithm has two main use cases:
     * **Text Classification:** A supervised learning system for predicting labels for sentences, useful in web searches and information retrieval.
