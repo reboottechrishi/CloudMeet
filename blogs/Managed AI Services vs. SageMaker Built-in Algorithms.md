@@ -1,8 +1,11 @@
 
 
-***
-## Choosing Your AI Path on AWS: A Guide to Managed AI Services vs. SageMaker Built-in Algorithms
-***
+ 
+### Choosing Your AI Path on AWS: A Guide to Managed AI Services vs. SageMaker Built-in Algorithms
+
+
+<img width="1472" height="832" alt="image" src="https://github.com/user-attachments/assets/e52d5a3b-b4f4-4bbf-8fde-3faab5e769b0" />
+
 
 ## Part1: AWS's Managed AI and Machine Learning Powerhouse
 
