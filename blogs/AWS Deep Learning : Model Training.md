@@ -2,9 +2,10 @@
 
 Deep learning is a subset of machine learning that uses neural networks to model complex patterns in data. These networks are inspired by the human brain, with billions of interconnected "neurons" arranged in layers. When a neuron receives enough input signals, it "fires" to its connected neurons. This simple concept, scaled across many layers, allows the network to learn and make predictions.
 
-<img width="1472" height="832" alt="image" src="https://github.com/user-attachments/assets/9c173813-11ac-43fb-a592-4a0e886d563a" />
+<img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/9c173813-11ac-43fb-a592-4a0e886d563a" />
 
 ---
+So, we've learned about classical ML algorithms from previous blogs. Now, we'll talk more about deep learning and neural networks. We'll cover how deep learning works and the architecture of some common models for image recognition and for analyzing time-series data. We'll also discuss how to tune these neural models and optimize their training. Additionally, we'll explore various ways to measure the effectiveness of classification models. Finally, we'll talk about how SageMaker can help with automated model tuning, using features like SageMaker Autopilot, TensorBoard experiments, and the SageMaker debugger..
 
 ### Key Concepts in Neural Networks
 
