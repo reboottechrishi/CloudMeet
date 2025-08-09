@@ -266,6 +266,76 @@ SageMaker provides optimized distributed training libraries that can achieve nea
 * **MiCS** (Minimize the Communication Scale) is a distributed training technique developed by Amazon that works with SageMaker's sharded data parallelism. It's designed to train models with over a trillion parameters by minimizing communication overhead, which is a major bottleneck in very large-scale distributed systems. 
 This video provides a deep dive into how SageMaker Training Compiler works and how you can use it to improve your training performance.
 
+Based on a search for "AWS Deep Learning Model Training," here are 20 FAQs covering key concepts and services:
+
+### General Concepts
+1.  **What is deep learning model training on AWS?**
+    Deep learning model training on AWS involves using cloud services to train complex models with large datasets, often utilizing specialized hardware like GPUs. It's a scalable and cost-effective approach that removes the need to manage physical infrastructure.
+
+2.  **What is Amazon SageMaker?**
+    Amazon SageMaker is a fully managed service that helps data scientists and developers build, train, and deploy machine learning (ML) models quickly. It provides a comprehensive platform for the entire ML workflow.
+
+3.  **What are AWS Deep Learning Containers?**
+    AWS Deep Learning Containers are Docker images pre-installed with deep learning frameworks (like TensorFlow and PyTorch) and their dependencies. They simplify the process of deploying custom ML environments and are optimized for use with services like SageMaker and Amazon EC2.
+
+4.  **What's the difference between using Amazon SageMaker and Amazon EC2 for model training?**
+    Amazon SageMaker is a managed service that handles the infrastructure, scaling, and orchestration of training jobs, making it ideal for streamlining the ML workflow. Amazon EC2 gives you more control over the infrastructure, but requires more manual setup and management of the environment, including installing frameworks and drivers.
+
+5.  **How can I reduce the cost of deep learning training on AWS?**
+    You can reduce costs by using managed services like SageMaker, which automatically spins down resources after a job is complete. You can also use services like SageMaker HyperPod, which offers resilient infrastructure, or leverage Spot Instances during training.
+
+***
+### Training Workflow
+6.  **What are the typical steps in a deep learning training workflow on AWS?**
+    A typical workflow involves preparing the dataset (often stored in Amazon S3), writing a training script, configuring and running a training job (e.g., on SageMaker), and then deploying and evaluating the trained model.
+
+7.  **What is a training job in Amazon SageMaker?**
+    A SageMaker training job is a fully managed process that automatically provisions the necessary compute cluster, loads data, runs your training script, and then cleans up the resources when the job is done.
+
+8.  **How do I prepare my data for model training on AWS?**
+    Data is typically stored in a cloud storage solution like **Amazon S3**. In SageMaker, you can read files directly from S3. The training script will then download or stream the data to the compute instance.
+
+9.  **What is a training script?**
+    A training script is a Python file that contains the code for your model. It defines the model architecture, the training loop, and how to save the final model and its artifacts.
+
+10. **What is distributed training on AWS?**
+    Distributed training involves splitting large models and training datasets across multiple AWS GPU instances to accelerate the training process. SageMaker offers distributed training libraries to simplify this process.
+
+***
+### Key Services and Features
+11. **What is Amazon SageMaker HyperPod?**
+    SageMaker HyperPod is a purpose-built infrastructure for large-scale foundation model development. It provides a resilient environment that can automatically detect and recover from hardware faults, allowing for long-running training jobs without disruption.
+
+12. **How does SageMaker handle large datasets and models?**
+    SageMaker uses distributed training libraries to automatically split large models and datasets across multiple AWS GPU instances, optimizing the process for the underlying network and cluster topology.
+
+13. **Can I use my own Docker images for training on SageMaker?**
+    Yes, you can bring your own training images. However, AWS also provides pre-built **Deep Learning Containers** that are optimized for popular frameworks like TensorFlow and PyTorch.
+
+14. **What is SageMaker Pipelines?**
+    SageMaker Pipelines helps you create automated ML workflows from data preparation to model deployment. It takes care of managing data between steps and orchestrates the execution, helping to scale to thousands of models in production.
+
+15. **How does Amazon Bedrock relate to model training?**
+    Amazon Bedrock is a service for building and scaling generative AI applications. While it doesn't directly replace training, it's a key service for using and fine-tuning foundation models for various use cases.
+
+***
+### Practical Aspects
+16. **How can I track and monitor my training jobs?**
+    SageMaker automatically streams logs to Amazon CloudWatch. You can also use tools like TensorBoard to visualize experiments and track metrics like loss and accuracy.
+
+17. **What happens if a training job fails?**
+    SageMaker is designed for resiliency. If an instance fails, the service can decide to reboot or replace it, and then restart the training from the last saved checkpoint, so you don't lose all your progress.
+
+18. **How are models saved and deployed after training?**
+    The training script saves the model to a specified directory, which is then uploaded to an S3 bucket. From there, you can deploy the model to a SageMaker endpoint for real-time or batch inference.
+
+19. **Do I need to pay to use AWS Deep Learning Containers?**
+    AWS Deep Learning Containers are available at no extra charge. You only pay for the underlying AWS services you use, such as Amazon SageMaker, Amazon EC2, Amazon ECS, or Amazon EKS.
+
+20. **What is the `estimator` API in SageMaker?**
+    The `estimator` API is a key component for converting your training code into a SageMaker training job. It allows you to configure your dataset, compute resources, and the training algorithm you want to use.
+
+### Imp Link
 [Scaling to trillion-parameter model training on AWS-MiCS](https://www.amazon.science/blog/scaling-to-trillion-parameter-model-training-on-aws)    
 [Build an Amazon SageMaker Model Registry approval and promotion workflow with human intervention](https://aws.amazon.com/blogs/machine-learning/build-an-amazon-sagemaker-model-registry-approval-and-promotion-workflow-with-human-intervention/)    
 [TensorBoard in Amazon SageMaker AI](https://docs.aws.amazon.com/sagemaker/latest/dg/tensorboard-on-sagemaker.html)    
