@@ -150,6 +150,10 @@ AWS SageMaker offers a rich collection of built-in algorithms that simplify the 
 
 #### SageMaker Input Modes for Training Jobs
 
+<img width="1966" height="1232" alt="image" src="https://github.com/user-attachments/assets/eba824b8-e408-4b3f-ac6d-e88af9f5b880" />
+
+[Link](https://docs.aws.amazon.com/sagemaker/latest/dg/model-access-training-data.html)
+
 When setting up a training job, you must configure how SageMaker accesses your datasets from S3. The choice of input mode impacts training time and cost.
 
 * **S3 File Mode:** This is the default mode. It copies all training data from S3 to a local directory on the Docker container. This is suitable for **small datasets and training jobs** where the data can fit entirely on the instance's storage. The main drawback is the time spent waiting for the data to be copied.
@@ -203,3 +207,92 @@ Here's a breakdown of some of the most popular SageMaker built-in algorithms and
 
 * **IP Insights:** An **unsupervised learning** algorithm that learns the usage patterns of specific IP addresses and entities (like user IDs). It automatically identifies and scores suspicious behavior, such as logins from anomalous IP addresses, to detect fraudulent activity.
 
+**Table summarizing the key SageMaker built-in algorithms and a common use case**
+
+| Algorithm | Type | Use Case |
+| :--- | :--- | :--- |
+| **Linear Learner** | Supervised (Regression/Classification) | Predicting the price of a house based on features like size and location (regression). |
+| **XGBoost** | Supervised (Regression/Classification) | Predicting customer churn based on past behavior and demographics. |
+| **LightGBM** | Supervised (Regression/Classification) | Faster and more memory-efficient alternative to XGBoost for large-scale datasets, such as ad click-through rate prediction. |
+| **Seq2Seq** | Supervised (Text) | Translating a sentence from English to German. |
+| **DeepAR** | Supervised (Time Series) | Forecasting the demand for a product over the next quarter. |
+| **BlazingText** | Supervised & Unsupervised (Text) | Classifying news articles into categories like "sports," "politics," or "finance." |
+| **Object2vec** | Supervised & Unsupervised (Embedding) | Finding similar products in an e-commerce catalog based on their attributes. |
+| **Object Detection** | Supervised (Vision) | Identifying and locating all cars in an image for a self-driving car system. |
+| **Image Classification** | Supervised (Vision) | Automatically tagging images of animals with their species (e.g., "cat," "dog," "bird"). |
+| **Semantic Segmentation** | Supervised (Vision) | Identifying every pixel that belongs to the "road" in an image for autonomous vehicle navigation. |
+| **Random Cut Forest** | Unsupervised (Anomaly Detection) | Detecting fraudulent credit card transactions by identifying unusual spending patterns. |
+| **Neural Topic Model** | Unsupervised (Text) | Organizing a large collection of customer feedback emails into latent topics like "shipping issues" or "product quality." |
+| **LDA** | Unsupervised (Text) | Discovering the main themes within a dataset of research papers. |
+| **K-Means** | Unsupervised (Clustering) | Grouping customers into different segments based on their purchasing habits. |
+| **KNN** | Supervised (Regression/Classification) | Classifying a new music track based on its similarity to a library of labeled songs. |
+| **PCA** | Unsupervised (Dimensionality Reduction) | Reducing the number of features in a dataset to visualize high-dimensional data in a 2D or 3D plot. |
+| **Factorization Machines** | Supervised (Classification/Regression) | Recommending movies to a user based on their past viewing history and the preferences of similar users. |
+| **IP Insights** | Unsupervised (Anomaly Detection) | Detecting logins from suspicious or unusual IP addresses to prevent account takeovers. |
+
+### FAQ: Choosing Your AI Path on AWS
+
+1.  **What is the main difference between AWS Managed AI Services and Amazon SageMaker?**
+    Managed AI services are pre-trained, ready-to-use models for specific tasks like sentiment analysis or language translation, requiring no ML expertise. SageMaker is a full-lifecycle platform for building, training, and deploying custom models, designed for data scientists and ML engineers.
+
+2.  **When should I choose a Managed AI Service?**
+    You should use a managed service when you need to solve a specific, common problem quickly, such as adding image recognition to an app or translating text. They are simple to use and cost-effective for these tasks.
+
+3.  **When should I choose Amazon SageMaker?**
+    Choose SageMaker when you need to build and train a custom machine learning model on your own unique data. It provides the flexibility to control every step of the ML process.
+
+4.  **Are the Managed AI Services and SageMaker mutually exclusive?**
+    No. They can be used together. For example, you might use Amazon Textract to extract text from documents and then use SageMaker to build a custom model that classifies that text.
+
+5.  **What kind of tasks are Managed AI Services good for?**
+    They are excellent for tasks like natural language processing (Amazon Comprehend), computer vision (Amazon Rekognition), text-to-speech (Amazon Polly), and document analysis (Amazon Textract).
+
+6.  **What is a SageMaker built-in algorithm?**
+    A built-in algorithm is a pre-packaged, optimized implementation of a common ML algorithm (like XGBoost or K-Means) that is ready to use within the SageMaker platform. This saves you from having to write the code for the algorithm yourself.
+
+7.  **Why use a built-in algorithm instead of a custom one on SageMaker?**
+    Built-in algorithms are typically highly optimized for performance and are easy to use, especially for common ML problems. They can significantly accelerate the development and training process.
+
+8.  **What is Amazon SageMaker Studio?**
+    SageMaker Studio is a unified, web-based IDE where you can perform all your ML development steps, from data preparation to model deployment, in a single interface.
+
+9.  **What is SageMaker Canvas?**
+    SageMaker Canvas is a no-code, visual ML environment within SageMaker Studio, aimed at business analysts. It allows you to build models and make predictions without writing any code.
+
+10. **How does SageMaker Data Wrangler fit into the ML process?**
+    Data Wrangler is a tool for data preparation. It provides a visual interface for cleaning, transforming, and exploring data to prepare it for machine learning, often used to feed data into SageMaker Canvas or a custom training job.
+
+11. **How do I choose between the different input modes for SageMaker training jobs?**
+    The choice depends on your dataset size and performance needs. **S3 File Mode** is for small datasets, while **S3 Fast File Mode** or **FSx for Lustre** is better for large datasets that require faster streaming and higher I/O performance.
+
+12. **What is the purpose of SageMaker Ground Truth?**
+    Ground Truth is a data labeling service. It helps you get high-quality training data by managing human annotators (from your own team or through Amazon Mechanical Turk), which is essential for supervised learning.
+
+13. **What is Amazon Bedrock, and how does it relate to these services?**
+    Amazon Bedrock is a platform for building generative AI applications using a variety of foundation models (FMs). While it can perform some similar tasks to services like Comprehend, Bedrock's strength is in its flexibility and ability to generate new content, whereas managed services are more specialized and cost-effective for their specific tasks.
+
+14. **What is the difference between SageMaker's `Object Detection` and `Image Classification` algorithms?**
+    **Image Classification** assigns a single label to an entire image (e.g., "This is an image of a dog"). **Object Detection** identifies and draws bounding boxes around multiple objects within an image, labeling each one individually (e.g., "There is a dog here and a cat there").
+
+15. **What is the best practice for data storage when using Athena with Glue?**
+    The best practice is to store data in **columnar formats** like ORC or Parquet and to **partition** your data in S3. This significantly reduces the amount of data scanned by Athena, which lowers costs and improves query performance.
+
+16. **Does Athena work on a CSV file?**
+    Yes, Athena can query CSV files, but for better performance and cost-effectiveness, it's recommended to convert your data to columnar formats like Parquet using Glue or an Athena `CREATE TABLE AS SELECT` (CTAS) query.
+
+17. **What is the role of the AWS Glue Data Catalog?**
+    The Glue Data Catalog is a central metadata repository. It stores table definitions, schemas, and locations of your data, allowing services like Athena and Redshift Spectrum to query your raw data in S3 as if it were a structured table.
+
+18. **Can I use my own custom models and algorithms on SageMaker?**
+    Yes, SageMaker is designed for this. You can package your own code and frameworks in a Docker container and use them for training and deployment within the SageMaker environment.
+
+19. **What is a major benefit of using SageMaker's built-in algorithms?**
+    A major benefit is **cost savings** and **efficiency**. Since they're pre-optimized, they can reduce the time and resources needed for training, and they often integrate with features like Managed Spot Training for further cost reduction.
+
+20. **Is SageMaker free to use?**
+    No, SageMaker is a paid service. However, you only pay for the compute, storage, and data processing resources you use, with no minimum fees. There is often a free tier for new users to get started.
+    
+[SageMaker Pricing Calculator](https://aws.amazon.com/sagemaker/pricing/)
+
+### SageMaker AI Free Tier
+ <img width="2386" height="892" alt="image" src="https://github.com/user-attachments/assets/d404ee32-8b8a-45cf-a096-514994cebadf" />
