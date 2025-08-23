@@ -28,6 +28,8 @@ The big breakthrough came in **2017** with the paper, *"Attention is All You Nee
 The magic behind this is a mechanism called **self-attention**.  
 Get rid of RNN’s for feed-forward neural networks (FFNN’s)
 
+<img width="1864" height="1418" alt="image" src="https://github.com/user-attachments/assets/3016ec9e-2d30-4226-ba4f-de96554b5a3e" />
+
 #### How Self-Attention Works
 
 Each encoder or decoder has a list of embeddings (vectors) for each token that means we are not dealing with with actual words, those words are being tokenized into some sort of numerical representation. Self-attention produces a weighted average of all token embeddings. The magic is in computing the attention weights.  
