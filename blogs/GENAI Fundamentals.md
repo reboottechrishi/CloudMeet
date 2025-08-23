@@ -208,6 +208,10 @@ At the heart of RAG are **vector embeddings** and **vector stores**.
 
 For more complex applications, Bedrock allows you to build **LLM agents**. An agent is an LLM that is given "tools" to perform actions. It's not just a conversational chatbot; it can take action on your behalf.
 
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/36641b3a-5f79-45cb-8f4e-2e13c4a6bc31" />    
+
+Image :https://developer.nvidia.com/blog/introduction-to-llm-agents
+
 * **How it Works:** The LLM is given a description of a set of tools, which are usually **Lambda functions**. When a user's prompt requires a tool, the agent's internal "planning module" figures out which tool to use and what information it needs. It then calls the Lambda function with the required parameters to get the answer.
 
 * **Use Cases:**
