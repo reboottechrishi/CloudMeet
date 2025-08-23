@@ -1,5 +1,7 @@
 
-## GENAI Fundamentals & Building GENAI apps: A Beginner's Guide to the Transformer Architecture and building GENAI apps using Bedrock
+## GENAI Fundamentals & Building GENAI apps using Bedrock
+
+***A Beginner's Guide to the Transformer Architecture and building GENAI apps using Bedrock***
 
 In 2023, the world of technology was fundamentally reshaped by a new wave of Generative AI, led by powerful models that could understand and generate human-like text, images, and more. At the heart of this revolution is a single, brilliant innovation: the **Transformer architecture**.
 
