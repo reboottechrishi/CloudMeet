@@ -1,5 +1,5 @@
 
-## GENAI Fundamentals: A Beginner's Guide to the Transformer Architecture and AWS
+## GENAI Fundamentals & Building GENAI apps: A Beginner's Guide to the Transformer Architecture and building GENAI apps using Bedrock
 
 In 2023, the world of technology was fundamentally reshaped by a new wave of Generative AI, led by powerful models that could understand and generate human-like text, images, and more. At the heart of this revolution is a single, brilliant innovation: the **Transformer architecture**.
 
@@ -156,8 +156,9 @@ Bedrock uses a split API structure to handle different tasks in the model lifecy
 * `bedrock-agent-runtime`: Used to perform inference against your deployed agents.
 
 Before you can use any of these models, you must request access via the AWS console. The approval process is quick and lets you try out different models and check their pricing, which is billed directly through AWS.
+
 • Must use with an IAM user (not root), User must have relevant Bedrock permissions like "AmazonBedrockFullAccess", "AmazonBedrockReadOnly"
----
+***
 
 ### The Two Paths to Customization: Fine-tuning vs. RAG
 
@@ -213,9 +214,90 @@ For more complex applications, Bedrock allows you to build **LLM agents**. An ag
 
 You can also use a knowledge base as a "tool" for an agent, a powerful technique called **"Agentic RAG."**
 
-To ensure your applications are safe, Bedrock offers **Guardrails**. This feature allows you to filter prompts and responses for specific words, topics, or personally identifiable information (PII) before the model processes them. It even includes a "Contextual Grounding Check" to help prevent hallucinations by measuring how well the response aligns with the provided context.
+To ensure your applications are safe, Bedrock offers **Guardrails**. This feature allows you to filter prompts and responses for specific words, topics, or personally identifiable information (PII) before the model processes them. It even includes a "Contextual Grounding Check" to help prevent hallucinations by measuring how well the response aligns with the provided context.    
+
+## FAQs on GenAI Fundamentals and AWS 
+ 
+**1. What is the Transformer architecture?**
+It's a deep learning model architecture, introduced in 2017, that processes all words in a sentence simultaneously and in parallel. This is a significant improvement over older models that processed words one at a time.
+
+**2. What is "self-attention"?**
+It's the key mechanism within a Transformer that allows a model to weigh the importance of every other word in a sentence when it processes a single word. It helps the model understand the context and relationships between words.
+
+**3. What is the difference between a Transformer and an RNN?**
+An **RNN** processes words sequentially, which creates an "information bottleneck" for long sentences. A **Transformer** processes words in parallel using self-attention, which is much more efficient and effective for handling long-range dependencies in language.
+
+**4. What are the three key vectors in a self-attention mechanism?**
+Every token (word) is given a **Query (Q)**, **Key (K)**, and **Value (V)** vector. The model compares a word's Query to every other word's Key to calculate an attention score, which determines how much to focus on each word.
+
+**5. What is Multi-Headed Self-Attention?**
+It's an advanced form of self-attention that allows the model to perform multiple attention calculations in parallel, each focusing on a different aspect of the relationships between words.
+
+**6. What does "decoder-only" mean for an LLM like GPT?**
+A decoder-only architecture means the model doesn't have a separate input and output concept. Its sole function is to generate the next token in a sequence, over and over, based on a prompt and the tokens it has already generated.
+
+**7. How do LLMs like GPT get rid of the idea of inputs and outputs?**
+They are trained on vast amounts of unlabeled text to simply learn to predict the next word in a sequence. This allows them to "learn a language" rather than being optimized for a specific task.
+
+**8. What is a token?**
+It's a numerical representation of a word or part of a word. LLMs work on numbers, so they convert text into tokens before processing.
+
+**9. What is an embedding?**
+An embedding is a numerical vector that encodes the semantic "meaning" of a token. Similar words will have embeddings that are located close to each other in a multi-dimensional space.
+
+**10. What is a "Context Window"?**
+It's the maximum number of tokens an LLM can process at once. This includes both the input prompt and the generated output.
+
+**11. What is "Temperature" in an LLM?**
+Temperature is a control that determines the level of randomness in the model's output. A low temperature produces more consistent results, while a high temperature makes the output more creative and varied.
+
+---
+
+**12. What are "Foundation Models" (FMs) in AWS?**
+FMs are the large, pre-trained Transformer models (like those from Anthropic or Amazon) that you can access and fine-tune for your specific applications.
+
+**13. What is Amazon Bedrock?**
+It's a serverless AWS service that provides a single, unified API to access various FMs from different providers. It acts as a central control panel for building GenAI applications.
+
+**14. What is the difference between the `bedrock` and `bedrock-runtime` API endpoints?**
+The `bedrock` endpoint is for managing and deploying models **before** they are used in production. The `bedrock-runtime` endpoint is for **real-time inference**, where your application sends prompts to a deployed model.
+
+**15. How do you get access to models in Bedrock?**
+You must first request access to each specific model via the AWS console. This is a required step before you can use it in your application.
+
+**16. What are the two main ways to customize an FM in Bedrock?**
+You can either **fine-tune** the model or use **Retrieval-Augmented Generation (RAG)**.
+
+**17. What is fine-tuning?**
+It's the process of continuing the training of an existing FM on your own data, which permanently bakes new information into the model's parameters.
+
+**18. What is a use case for fine-tuning?**
+A common use case is training a chatbot to have a specific personality or brand voice by fine-tuning it on your company's support transcripts.
+
+**19. What is Retrieval-Augmented Generation (RAG)?**
+RAG is an alternative to fine-tuning where an LLM is given access to an external knowledge base to help answer a user's prompt. It retrieves relevant information from a database and provides it to the model as context.
+
+**20. What is a key advantage of RAG over fine-tuning?**
+RAG is faster and cheaper to update because you only have to update a database, not retrain an entire model. It's also effective at reducing "hallucinations."
+
+**21. What are embeddings and vector stores in the context of RAG?**
+**Embeddings** are numerical vectors that represent the meaning of text. A **vector store** is a specialized database that stores these embeddings, allowing for a fast "semantic search" to find relevant information for the LLM.
+
+**22. What are Bedrock Knowledge Bases?**
+They are a feature within Bedrock that automates the RAG process. You upload your documents to an S3 bucket, and Bedrock automatically handles chunking the data, creating embeddings, and storing them in a vector store.
+
+**23. What are LLM agents?**
+An LLM agent is a foundation model that can be given a set of "tools" (often Lambda functions) to perform actions on its own, such as looking up an order status or getting weather information.
+
+**24. What are Bedrock Guardrails?**
+They are a safety feature that allows you to apply content filtering to both user prompts and model responses. They can be configured to filter for specific words, topics, or even PII.
+
+**25. What is "Agentic RAG"?**
+It's a powerful technique where a knowledge base is used as a "tool" for an LLM agent, allowing the agent to perform both actions and retrieve information from a private data source.
+***
+
+IMPORTANT LINKS
+---
 [Research Paper-Attention is All You Need](https://arxiv.org/abs/1706.03762)    
 [Tokwnizer tool](https://platform.openai.com/tokenizer)  
-
-
 [Video :Deploy LLMs with SageMaker JumpStart](https://www.youtube.com/watch?v=1-AOLoOiuG4)
