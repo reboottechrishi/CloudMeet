@@ -1,5 +1,5 @@
 
-### GENAI Fundamentals: A Beginner's Guide to the Transformer Architecture and AWS
+## GENAI Fundamentals: A Beginner's Guide to the Transformer Architecture and AWS
 
 In 2023, the world of technology was fundamentally reshaped by a new wave of Generative AI, led by powerful models that could understand and generate human-like text, images, and more. At the heart of this revolution is a single, brilliant innovation: the **Transformer architecture**.
 
@@ -138,7 +138,82 @@ The best way for a beginner to get hands-on with these models is with **Amazon S
 This makes the power of Generative AI and the Transformer architecture accessible to everyone, from students to experienced ML engineers.
 
 ---
+## Building GenAI Apps with AWS Bedrock
 
+You've understand about the power of Generative AI (GenAI) and Large Language Models (LLMs), but how do you actually build an application with them? The answer on AWS is **Amazon Bedrock**.
+
+Think of Bedrock as a central control panel for all the latest and greatest foundation models (FMs). Instead of learning a different API for each model, Bedrock gives you a single, serverless API to access FMs from various providers like **AI21 Labs (Jurassic-2)**, **Anthropic (Claude)**, **Meta (Llama)**, and **Amazon's own Titan models**. This unified approach allows you to build sophisticated GenAI applications without managing any underlying infrastructure.
+
+---
+
+### Understanding the Bedrock API Endpoints
+
+Bedrock uses a split API structure to handle different tasks in the model lifecycle. This is a key concept to understand for building and managing your applications. Bedrock offers four different types of Endpoints
+
+* `bedrock`: This is your **management API**. You use it for tasks you do **before** an application goes live, such as managing your models, deploying them, or fine-tuning them. Think of it as the control plane for your models.
+* `bedrock-runtime`: This is the **inference API**. You use this for real-time tasks **after** a model is deployed. This is where your application sends a user's prompt to the model and gets a response back. The `InvokeModel` command is the most common here. For experiences like ChatGPT, where the output appears one word at a time, you'd use the `InvokeModelWithResponseStream` command.
+* `bedrock-agent`: Used to manage and deploy your LLM agents and their associated knowledge bases.
+* `bedrock-agent-runtime`: Used to perform inference against your deployed agents.
+
+Before you can use any of these models, you must request access via the AWS console. The approval process is quick and lets you try out different models and check their pricing, which is billed directly through AWS.
+• Must use with an IAM user (not root), User must have relevant Bedrock permissions like "AmazonBedrockFullAccess", "AmazonBedrockReadOnly"
+---
+
+### The Two Paths to Customization: Fine-tuning vs. RAG
+
+When you want to give a foundation model new, private information—like your company's documents or your own specific writing style—you have two main options: **fine-tuning** and **Retrieval-Augmented Generation (RAG)**.
+
+#### Fine-tuning: Teaching the Model New Tricks
+
+**Fine-tuning** is the process of continuing the training of an existing foundation model on your own data. You are literally **changing the model itself** by baking new information directly into its parameters.
+
+* **Use Case:** You want to create a chatbot that has a specific personality or a certain brand voice. You can fine-tune a model on your company's support transcripts to teach it to sound helpful and professional. You are making the model "smarter" for your specific needs.
+* **Pros:** Eliminates the need for complex "prompt engineering" to get the desired output. It can also save you money in the long run because you don't need to send the extra context in every single prompt.
+* **Cons:** It can be expensive and requires a large, labeled dataset. Any new information requires you to re-tune the entire model, which is a static process.
+
+Bedrock supports fine-tuning for specific models like **Titan, Cohere, and Meta models**. You provide labeled training data (e.g., pairs of prompts and the desired completions) and Bedrock handles the process, creating a "custom model" for you to use like any other.
+
+#### Retrieval-Augmented Generation (RAG): The Overcomplicated Search Engine
+
+**RAG** is a popular alternative to fine-tuning that is faster, cheaper, and more flexible. Instead of training the model on new information, you give it access to an external **knowledge base** to query for answers. The LLM then uses this retrieved information to help answer a user's prompt. 
+
+* **Use Case:** You want to build a Q&A chatbot for your company's internal documents or product manuals. You can load all your documents into a RAG system, and when an employee asks a question, the system finds the most relevant information from your documents and uses that context to generate a precise answer. This is a simple way to deliver "AI search" to your team.
+* **Pros:**
+    * **Faster and Cheaper:** Updating your knowledge base is as simple as updating a database, with no need for a costly fine-tuning job.
+    * **Fewer Hallucinations:** You can guide the LLM to use only the provided context, which significantly reduces the risk of it making things up.
+    * **Flexibility:** You are not training the model, so you can update your information with new data in real time.
+
+* **Cons:** RAG is sensitive to the quality of your prompt templates and the relevance of the retrieved data. If you get the wrong context, the model may still provide an incorrect answer.
+
+---
+
+### The Technology Behind RAG: Vector Stores & Embeddings
+
+At the heart of RAG are **vector embeddings** and **vector stores**.
+
+* **Embeddings:** An embedding is a numerical representation of text (or an image, audio, etc.). It's like a point in a multi-dimensional space where similar pieces of text are located close to each other. Bedrock uses a special embedding model (**Cohere** or **Amazon Titan Embeddings**) to create these vectors. 
+* **Vector Store:** This is a specialized database that stores these embeddings. When a user asks a question, the query is also converted into an embedding. The vector store then performs a "semantic search" to find the most similar embeddings (i.e., the most relevant chunks of text) in the database.
+
+**Bedrock Knowledge Bases** simplify this entire process. You simply upload your documents (e.g., from an S3 bucket), and Bedrock automatically handles:
+1.  **Chunking:** Breaking your documents into smaller pieces.
+2.  **Embedding:** Creating a vector for each chunk using your chosen embedding model.
+3.  **Storing:** Placing the embeddings in a vector store (like **OpenSearch** or **Aurora**).
+
+---
+
+### Building Intelligent Agents with Bedrock Agents
+
+For more complex applications, Bedrock allows you to build **LLM agents**. An agent is an LLM that is given "tools" to perform actions. It's not just a conversational chatbot; it can take action on your behalf.
+
+* **How it Works:** The LLM is given a description of a set of tools, which are usually **Lambda functions**. When a user's prompt requires a tool, the agent's internal "planning module" figures out which tool to use and what information it needs. It then calls the Lambda function with the required parameters to get the answer.
+
+* **Use Cases:**
+    * **Customer Service Bot:** A user asks, "What's the status of my order?" The agent can use a "tool" (a Lambda function) to query your order database, retrieve the status, and provide the answer.
+    * **Product Research:** An agent can be given a tool that queries a product API. When a user asks for a product's price, the agent uses the tool to look it up in real time.
+
+You can also use a knowledge base as a "tool" for an agent, a powerful technique called **"Agentic RAG."**
+
+To ensure your applications are safe, Bedrock offers **Guardrails**. This feature allows you to filter prompts and responses for specific words, topics, or personally identifiable information (PII) before the model processes them. It even includes a "Contextual Grounding Check" to help prevent hallucinations by measuring how well the response aligns with the provided context.
 [Research Paper-Attention is All You Need](https://arxiv.org/abs/1706.03762)    
 [Tokwnizer tool](https://platform.openai.com/tokenizer)  
 
