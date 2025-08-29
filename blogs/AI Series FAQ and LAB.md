@@ -34,6 +34,14 @@
 - What is "Agentic RAG"?
 - What is a key advantage of RAG over fine-tuning?
 
+- What is MLOps?
+- How does a Blue Green, Canary deployment work
+- What is a SageMaker Project?
+- Difference betwen data drift or concept drift ? [hint:Model Monitor]
+- [Bonus questions]Explain CodeCommit CodeBuild , and CodeDeploy?
+- What is the purpose of the "Machine Learning Lens",AWS Well-Architected Framework ?
+- What is the role of Amazon A2I in an ML pipeline? 
+
 ## LAB
 - 1.
 - 2.
