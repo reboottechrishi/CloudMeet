@@ -266,7 +266,7 @@ SageMaker provides optimized distributed training libraries that can achieve nea
 * **MiCS** (Minimize the Communication Scale) is a distributed training technique developed by Amazon that works with SageMaker's sharded data parallelism. It's designed to train models with over a trillion parameters by minimizing communication overhead, which is a major bottleneck in very large-scale distributed systems. 
 This video provides a deep dive into how SageMaker Training Compiler works and how you can use it to improve your training performance.
 
-Based on a search for "AWS Deep Learning Model Training," here are 20 FAQs covering key concepts and services:
+### FAQ
 
 ### General Concepts
 1.  **What is deep learning model training on AWS?**
