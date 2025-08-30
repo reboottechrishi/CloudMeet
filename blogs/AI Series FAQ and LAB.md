@@ -10,7 +10,7 @@
 - Correct below SageMaker Workflow sequence 
 ```
 3.Fetch, clean, and prepare Data →
-2.Trail and evaluate model →
+2.Train and evaluate model →
 1.Deploy models, evaluate results in production [Sagemker Traning and Deployment architecture
 ```
 - Explain SageMaker Tools like Notebooks, Domain, Studio,Data Wrangler,Canvas,Feature Store, SageMaker Debugger, SageMaker Model Registry
