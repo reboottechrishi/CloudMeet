@@ -4,7 +4,7 @@
 - what is unbalanced data, difference between Oversampling and Undersampling.
 - What is an outlier, and why are they a concern in ML
 - Binning in Feature Engineering?
-- List Five differebt AWS Managed AI Services name and use case 
+- List Five different AWS Managed AI Services name and use case 
 - What is Amazon Mechanical Turk vs Amazon Augmented AI (A2I)
 - Differece betweeb Amazon Q Business, Amazon Q Developer
 - Correct below SageMaker Workflow sequence 
