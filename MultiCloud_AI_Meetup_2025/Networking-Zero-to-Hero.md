@@ -4,8 +4,9 @@
 
 ```
 1. Basic Networing - About Netork , OSI Model IP Address
-2. Switch- About and configuration, VLAN STP QOS Trunk 
-3. Router - About and Configuration BGP protocol.
+2. Switch- About and configuration,
+       - VLAN STP  
+3. QOS, Trunk, Router - About and Configuration BGP protocol.
 
 4. Cloud - VPC CIDR , VPC Peering subnetting
 |Link|| https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html |
