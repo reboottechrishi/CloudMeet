@@ -1,5 +1,5 @@
 
-# A Beginner's Guide to Git, GitHub, and Agile** 🚀 
+# A Beginner's Guide to DevOps** 🚀 
 **Author: Mitansh** 
 -----------------------
 
