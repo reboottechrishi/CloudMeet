@@ -56,7 +56,7 @@ Python is a high-level, interpreted programming language renowned for its readab
     If Python is installed correctly, you should see the installed Python version
 
 ```
-$mukesh@Mukeshs-MBP% python3 --version
+$-MBP% python3 --version
 Python 3.12.4
 
 ```
@@ -197,7 +197,7 @@ print(keyword.kwlist)
 ```
 #List
 
-name = ["Mukesh","Joe","John"] 
+name = ["MK","Joe","John"] 
 print(name)
 cars = ["bmw", "swift","maruti"]  
 City = ['Gaya', "nj", "nyc"]
@@ -214,9 +214,9 @@ print(name)
 
 
 # use of len in sting and List 
-a =  "Mukesh kumar"
+a =  "MK kumar"
 
-a = ["Mukesh", "kumar"]
+a = ["MK", "kumar"]
 print(len(a))
 
 ```
@@ -475,7 +475,7 @@ my_function("From")
 def my_function(fname,lname,tname):
     print(fname + " " + lname + " " + tname)
 
-my_function("Mukesh", "kumar", "pp")
+my_function("MK", "kumar", "pp")
 
 ```
 ```
