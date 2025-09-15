@@ -605,4 +605,6 @@ my_file.close()
 |AWS SDK for Python (Boto3)| https://aws.amazon.com/sdk-for-python/|
 
 | AWS_API Ref| https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html |
+https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/PythonCheatsheet.md
+https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md
 
