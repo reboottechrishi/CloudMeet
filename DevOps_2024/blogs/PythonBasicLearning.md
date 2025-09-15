@@ -2,6 +2,13 @@
 ### Table of Contents
   
  
+| Topic | URL |
+| :--- | :--- |
+| **PythonCheatsheet** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/PythonCheatsheet.md |
+| **Boto3_Cheatsheet.md** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md |
+| **Boto3_Cheatsheet** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md |
+| **AWS SDK for Python (Boto3)** | [https://aws.amazon.com/sdk-for-python/|
+| **AWS_API Ref** | [https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html|
 
 
 [What is Python & key use cases of Python with AWS?](#what-is-python-and-key-use-cases-of-python-with-aws)
@@ -602,9 +609,4 @@ my_file.close()
 ### Link
 
 
-|AWS SDK for Python (Boto3)| https://aws.amazon.com/sdk-for-python/|
-
-| AWS_API Ref| https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html |
-https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/PythonCheatsheet.md
-https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md
 
