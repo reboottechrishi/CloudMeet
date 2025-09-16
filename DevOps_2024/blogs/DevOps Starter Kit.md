@@ -1,6 +1,6 @@
 
 # A Beginner's Guide to DevOps** 🚀 
-**Author: Mitansh** 
+> **Author: Mitansh Manav** 
 -----------------------
 
 Welcome to the world of DevOps! If you're new here, the sheer number of tools and concepts can seem overwhelming. But don't worry, we're here to break down the essentials. This guide will walk you through the core concepts of **Git**, **GitHub**, **Agile**, and more which are fundamental to modern DevOps practices.
