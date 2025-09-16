@@ -1,9 +1,8 @@
 
 # The Power of YAML and JSON in DevOps
-Author: Vikas Sharma
+> **Author: Vikas Sharma**
 ----------------------
-```
-```
+ 
 
 ## **Understanding YAML**
 
