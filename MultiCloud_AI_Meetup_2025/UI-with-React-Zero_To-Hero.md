@@ -1,5 +1,9 @@
 #   Zero to Hero Frontend Development with React
 
+1. create blog on React
+   - basic and advace
+   - build your project and deploy using "vercael", "aws amplify", "S3+CDN"
+  
 ### Use Case: Full-Stack E-commerce Application with React, AWS, and Python
 
 **- Interactive To-Do List:**
