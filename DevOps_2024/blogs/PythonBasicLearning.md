@@ -2,6 +2,13 @@
 ### Table of Contents
   
  
+| Topic | URL |
+| :--- | :--- |
+| **PythonCheatsheet** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/PythonCheatsheet.md |
+| **Boto3_Cheatsheet.md** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md |
+| **Boto3_Cheatsheet** | [https://github.com/reboottechrishi/CloudMeet/blob/main/DevOps_2024/Python/Boto3_Cheatsheet.md |
+| **AWS SDK for Python (Boto3)** | [https://aws.amazon.com/sdk-for-python/|
+| **AWS_API Ref** | [https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html|
 
 
 [What is Python & key use cases of Python with AWS?](#what-is-python-and-key-use-cases-of-python-with-aws)
@@ -49,7 +56,7 @@ Python is a high-level, interpreted programming language renowned for its readab
     If Python is installed correctly, you should see the installed Python version
 
 ```
-$mukesh@Mukeshs-MBP% python3 --version
+$-MBP% python3 --version
 Python 3.12.4
 
 ```
@@ -190,7 +197,7 @@ print(keyword.kwlist)
 ```
 #List
 
-name = ["Mukesh","Joe","John"] 
+name = ["MK","Joe","John"] 
 print(name)
 cars = ["bmw", "swift","maruti"]  
 City = ['Gaya', "nj", "nyc"]
@@ -207,9 +214,9 @@ print(name)
 
 
 # use of len in sting and List 
-a =  "Mukesh kumar"
+a =  "MK kumar"
 
-a = ["Mukesh", "kumar"]
+a = ["MK", "kumar"]
 print(len(a))
 
 ```
@@ -468,7 +475,7 @@ my_function("From")
 def my_function(fname,lname,tname):
     print(fname + " " + lname + " " + tname)
 
-my_function("Mukesh", "kumar", "pp")
+my_function("MK", "kumar", "pp")
 
 ```
 ```
@@ -602,7 +609,4 @@ my_file.close()
 ### Link
 
 
-|AWS SDK for Python (Boto3)| https://aws.amazon.com/sdk-for-python/|
-
-| AWS_API Ref| https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html |
 
