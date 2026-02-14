@@ -32,7 +32,7 @@ Tip: The FAQ with 20+ questions is at the end of this document.
 
 ---
 
-![AI Image Generator App Architecture](https://github.com/data-abhishek/AWS-Certified-Data-Analyst-Preparation/blob/main/chromalabimage.png)
+![AI Image Generator App Architecture](https://github.com/data-abhishek/AWS-Certified-Data-Analyst-Preparation/blob/main/imagenlabimage.png)
 
 ---
 
@@ -260,4 +260,5 @@ Answer: Configure Python logging (e.g., `logging.basicConfig(level=logging.INFO)
 
 ### Q24. Can I package this as a CLI tool?
 Answer: Yes—add `argparse` flags for project, region, prompt, seed, number_of_images, output path, and wrap main logic in `if __name__ == "__main__":`.
+
 
